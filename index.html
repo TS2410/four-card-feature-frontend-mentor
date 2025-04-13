@@ -10,34 +10,95 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px; text-align: center;
+    }
+    .attribution a { 
+      color: hsl(228, 45%, 44%); 
+    }
+    .display-flx{
+      display: flex;
+    }
+    .display-inline{
+      display: inline;
+    }
+    .flx-direction-row{
+      flex-direction: row;
+    }
+    .flx-direction-column{
+      flex-direction: column;
+    }
+    .align-items-cntr{
+     align-items: center;
+    }
+    .justify-content-cntr{
+      justify-content: center;
+    }
+    .wht-bg{
+      background-color: white;
+    }
+    .border-radius{
+      border-radius: 15px;  
+    }
+    .padding{
+      padding: 20px;
+    }
+    .sml-padding{
+      padding: 10px;
+    }
+    .margin{
+      margin: 20px;
+    }
+    body{
+      background-color: rgb(221, 221, 221);
+      height: 97vh;
+    }
+    .card-1, .card-2, .card-3, .card-4{
+      width: 280px;
+      height: 180px;
+    }
+    .cont-card-1, .cont-card-2n3, .cont-card-4{
+      width: 360px;
+      height: 200px;
+      display: flex;
+      flex-direction: row;  
+    }
+    .cont-card-1{
+     align-items: center;
+     justify-content: center;
+    }
+    .cont-img{
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      width: 100%;
+    }
   </style>
 </head>
-<body>
-  <div class="main">
-    <div class="heading">
+<body class="sml-padding">
+  <div class="main display-flx flx-direction-column">
+    <div class="heading padding">
     <h2>Reliable, efficient delivery</h2>
     <h2>Powered by Technology</h2>
     
     <p>Our Artificial Intelligence powered tools use millions of project data points 
     to ensure that your project is successful</p>
     </div>
-    <div class="container">
-      <div class="cont-card-1">
-        <div class="card-1">
+    <div class="container display-flx flx-direction-row">
+      <div class="cont-card-1 sml-padding">
+        <div class="card-1 wht-bg border-radius padding margin display-flx flx-direction-column"><!--card1 start-->
           <div class="head">
             <h3>Supervisor</h3>
             <p>Monitors activity to identify project roadblocks</p>
           </div>
           <div class="cont-img">
             <img src="./images/icon-supervisor.svg">
-          </div>
+          </div><!--card1 end-->
         </div>
       </div>
 
-      <div class="cont-card-2n3">
-        <div class="card-2">
+      <div class="cont-card-2n3 sml-padding">
+        <div class="card-2 wht-bg border-radius padding margin display-flx flx-direction-column"><!--card2 start-->
           <div class="head">
             <h3>Team Builder</h3>
             <p>Scans our talent network to create the optimal team for your project</p>
@@ -45,8 +106,8 @@
           <div class="cont-img">
             <img src="./images/icon-team-builder.svg">
           </div>
-        </div>
-        <div class="card-3">
+        </div><!--card2 end-->
+        <div class="card-3 wht-bg border-radius padding margin display-flx flx-direction-column"><!--card3 start-->
           <div class="head">
             <h3>Karma</h3>
             <p>Regularly evaluates our talent to ensure quality</p>
@@ -54,11 +115,11 @@
           <div class="cont-img">
             <img src="./images/icon-karma.svg">
           </div>
-        </div>
+        </div><!--card3 end-->
       </div>
 
-      <div class="-cont-card-4">
-        <div class="card-4">
+      <div class="-cont-card-4 sml-padding">
+        <div class="card-4 wht-bg border-radius padding margin display-flx flx-direction-column"><!--card4 start-->
           <div class="head">
             <h3>Calculator</h3>
             <p>Uses data from past projects to provide better delivery estimates</p>
@@ -66,16 +127,15 @@
           <div class="cont-img">
             <img src="./images/icon-calculator.svg">
           </div>
-        </div>
+        </div><!--card4 end-->
       </div>
     </div>
   </div>
 
-  
   <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="https://www.linkedin.com/in/tushar-sharma-b551ba345/"  target="_blank">Tushar</a>.
     </p>
   </footer>
 </body>
