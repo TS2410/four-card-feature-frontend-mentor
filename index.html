@@ -10,6 +10,15 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
+    @media(max-width: 750px){
+      .main{
+        flex-direction: column;
+      }
+      .container{
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+    }
     .attribution {
       font-size: 11px; text-align: center;
     }
@@ -46,22 +55,39 @@
     .sml-padding{
       padding: 10px;
     }
+    .box-shadow {
+      box-shadow: -7px 10px 15px  rgba(0, 0, 0, 0.15);
+    }
     .margin{
       margin: 20px;
     }
     body{
-      background-color: rgb(221, 221, 221);
       height: 97vh;
     }
     .card-1, .card-2, .card-3, .card-4{
       width: 280px;
       height: 180px;
     }
-    .cont-card-1, .cont-card-2n3, .cont-card-4{
+    .card-1{
+      border-top: 8px solid hsl(180, 62%, 55%);
+    }
+    .card-2{
+      border-top: 8px solid hsl(0, 78%, 62%);
+    }
+    .card-3{
+      border-top: 8px solid hsl(34, 97%, 64%);
+    }
+    .card-4{
+      border-top: 8px solid hsl(212, 86%, 64%);
+    }
+    .cont-card-1, .cont-card-4{
       width: 360px;
       height: 200px;
       display: flex;
       flex-direction: row;  
+    }
+    .cont-card-2n3{
+      width: 360px;
     }
     .cont-card-1{
      align-items: center;
@@ -73,10 +99,18 @@
       justify-content: flex-end;
       width: 100%;
     }
+    .heading{
+      text-align: center; 
+      max-width: 500px;
+      width: 100%;
+    }
+    .main{
+      height: 95%;
+    }
   </style>
 </head>
 <body class="sml-padding">
-  <div class="main display-flx flx-direction-column">
+  <div class="main display-flx flx-direction-column align-items-cntr justify-content-cntr">
     <div class="heading padding">
     <h2>Reliable, efficient delivery</h2>
     <h2>Powered by Technology</h2>
@@ -84,9 +118,9 @@
     <p>Our Artificial Intelligence powered tools use millions of project data points 
     to ensure that your project is successful</p>
     </div>
-    <div class="container display-flx flx-direction-row">
+    <div class="container display-flx flx-direction-row align-items-cntr justify-content-cntr">
       <div class="cont-card-1 sml-padding">
-        <div class="card-1 wht-bg border-radius padding margin display-flx flx-direction-column"><!--card1 start-->
+        <div class="card-1 wht-bg border-radius padding margin display-flx flx-direction-column box-shadow"><!--card1 start-->
           <div class="head">
             <h3>Supervisor</h3>
             <p>Monitors activity to identify project roadblocks</p>
@@ -97,8 +131,8 @@
         </div>
       </div>
 
-      <div class="cont-card-2n3 sml-padding">
-        <div class="card-2 wht-bg border-radius padding margin display-flx flx-direction-column"><!--card2 start-->
+      <div class="cont-card-2n3 sml-padding display-flx flx-direction-column">
+        <div class="card-2 wht-bg border-radius padding margin display-flx flx-direction-column box-shadow"><!--card2 start-->
           <div class="head">
             <h3>Team Builder</h3>
             <p>Scans our talent network to create the optimal team for your project</p>
@@ -107,7 +141,7 @@
             <img src="./images/icon-team-builder.svg">
           </div>
         </div><!--card2 end-->
-        <div class="card-3 wht-bg border-radius padding margin display-flx flx-direction-column"><!--card3 start-->
+        <div class="card-3 wht-bg border-radius padding margin display-flx flx-direction-column box-shadow"><!--card3 start-->
           <div class="head">
             <h3>Karma</h3>
             <p>Regularly evaluates our talent to ensure quality</p>
@@ -118,8 +152,8 @@
         </div><!--card3 end-->
       </div>
 
-      <div class="-cont-card-4 sml-padding">
-        <div class="card-4 wht-bg border-radius padding margin display-flx flx-direction-column"><!--card4 start-->
+      <div class="cont-card-4 sml-padding">
+        <div class="card-4 wht-bg border-radius padding margin display-flx flx-direction-column box-shadow"><!--card4 start-->
           <div class="head">
             <h3>Calculator</h3>
             <p>Uses data from past projects to provide better delivery estimates</p>
